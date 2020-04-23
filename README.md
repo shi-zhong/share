@@ -1,0 +1,2 @@
+# share
+storage share necessary
