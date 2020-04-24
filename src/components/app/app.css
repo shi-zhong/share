@@ -1,0 +1,184 @@
+body{
+  background: black;
+  margin: 0;
+  overflow: hidden;
+}
+.phone{
+  position: relative;
+  border-radius: 55px;
+  box-shadow: 0 0 0 2px #aaa;
+  height: 568px;
+  width: 320px;
+  padding: 105px 25px;
+  box-sizing: content-box;
+  margin: 10px;
+  overflow: hidden;
+}
+.phone::before{
+  content: '';
+  width: 60px;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  margin: -30px;
+  background: #333;
+  top: 50px;
+}
+.phone::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 5px solid #333;
+}
+.screen{
+  margin-top: -20px;
+  height: 590px;  
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  padding: 0;
+}
+.screen::-webkit-scrollbar{
+  display: none;
+}
+.top-title{
+  height:21px;
+  /* margin-top: -px; */
+  background: rgb(61, 61, 61);
+  position: relative;
+  z-index: 2;
+}
+.hd{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 15px;
+}
+.hd::before{
+  content: "HD";
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  width: 20px;
+  height: 10px;
+  background: white;
+  border-radius: 2px;
+  margin: 0 2px;
+}
+.hd :nth-child(1){
+  background: white;
+  margin: 0 1px;
+  width: 2px;
+  height: 2px;
+}
+.hd :nth-child(2){
+  background: white;
+  margin: 0 1px;
+  width: 2px;
+  height: 4px;
+}
+.hd :nth-child(3){
+  background: white;
+  margin: 0 1px;
+  width: 2px;
+  height: 6px;
+}
+.hd :nth-child(4){
+  background: white;
+  margin: 0 1px;
+  width: 2px;
+  height: 8px;
+}
+.hd :nth-child(5){
+  background: white;
+  margin: 0 1px;
+  width: 2px;
+  height: 10px;
+}
+.time{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 15px;
+  color: white;
+}
+.battery{
+  height: 10px;
+  width: 20px;
+  background: white;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+.battery::before{
+  content: '100%';
+  position: absolute;
+  left: -34px;
+  top: -3px;
+  font-size: 10px;
+  color: white;
+}
+.battery::after{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  right: -3px;
+  top: 3px;
+  background: white;
+}
+.outline{
+  height: 568px;
+  overflow: hidden;
+}
+.butch{
+  position: absolute;
+  left: 450px;
+  top: 300px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 23px;
+}
+.butch div{
+  margin: 10px;
+  position: relative;
+  height: 50px;
+  width: 120px;
+  color: white;
+  background-image: linear-gradient(to right, #39b54a, #1cbbb4, #0081ff, #6739b6, #9c26b0, #e03997,#e03997, #9c26b0, #6739b6, #0081ff, #1cbbb4, #39b54a);  
+  background-size: 400%;
+  border-radius: 30px;
+  animation: backturn 30s linear infinite;
+}
+.butch div::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  filter: blur(20px);
+  margin-top: -5px;
+  margin-left: -5px;
+  height: 60px;
+  width: 130px;
+  background-image: linear-gradient(to right, #39b54a, #1cbbb4, #0081ff, #6739b6, #9c26b0, #e03997,#e03997, #9c26b0, #6739b6, #0081ff, #1cbbb4, #39b54a);  
+  background-size: 400%;
+  border-radius: 30px;
+  animation: backturn 30s linear infinite;
+}
+@keyframes backturn {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 400% 0%;
+  }
+}
