@@ -19,14 +19,13 @@ export default class ViewT extends Component {
   handleTouch (e) {
     const { scrollTop, transDis, preTouch } = this.state
     const deltaY = e.touches[0].clientY - preTouch
-    console.log(e.touches[0].clientY,'-',preTouch,'=',deltaY)
     if ( scrollTop === 0 && transDis<=40) {
       if (transDis +deltaY*0.4 < 40) {
         this.setState({ transDis: transDis + deltaY*0.4 })
       } else {
         this.setState({ transDis: 40})
       }
-      e.preventDefault()
+      // e.preventDefault()
     }
     this.setState({
       preTouch: e.touches[0].clientY,
